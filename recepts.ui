@@ -6,35 +6,52 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>615</width>
+    <height>610</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Книга рецептов</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>90</y>
-      <width>191</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QLineEdit" name="sort">
     <property name="geometry">
      <rect>
       <x>270</x>
-      <y>90</y>
-      <width>75</width>
-      <height>23</height>
+      <y>145</y>
+      <width>201</width>
+      <height>22</height>
      </rect>
     </property>
-    <property name="text">
-     <string>PushButton</string>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>145</y>
+      <width>111</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>180</y>
+      <width>411</width>
+      <height>311</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="marks">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>145</y>
+      <width>81</width>
+      <height>22</height>
+     </rect>
     </property>
    </widget>
    <widget class="QListWidget" name="listWidget">
@@ -47,23 +64,13 @@
      </rect>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>130</y>
-      <width>191</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>615</width>
      <height>21</height>
     </rect>
    </property>
@@ -72,6 +79,8 @@
      <string>Возможности</string>
     </property>
     <addaction name="action"/>
+    <addaction name="action_3"/>
+    <addaction name="action_2"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -79,6 +88,16 @@
   <action name="action">
    <property name="text">
     <string>Добавить рецепт</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Удалить рецепт</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Редактировать рецепт</string>
    </property>
   </action>
  </widget>
