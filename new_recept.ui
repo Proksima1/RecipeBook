@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Добавление рецепта</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/receipt_book.png</normaloff>icons/receipt_book.png</iconset>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -123,7 +127,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Метки(записывать через пробел без запятых):</string>
+         <string>Метки(записывать через запятую):</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>

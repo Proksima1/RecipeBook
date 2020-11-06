@@ -1,12 +1,12 @@
-from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from PyQt5.QtWidgets import QWidget, QApplication
+from PyQt5 import QtWidgets, uic, QtCore
+from PyQt5.QtWidgets import QApplication
 import sys
 import sqlite3
 
 
 class add_receipt(QtWidgets.QDialog):
-    def __init__(self):
-        super(add_receipt, self).__init__()
+    def __init__(self, parent=None):
+        super(add_receipt, self).__init__(parent, QtCore.Qt.Window)
         uic.loadUi('new_recept.ui', self)
         self.buttonBox.accepted.connect(self.accepted)
         self.buttonBox.rejected.connect(self.denie)
@@ -35,12 +35,15 @@ class add_receipt(QtWidgets.QDialog):
             self.cursor.execute(f"""INSERT INTO 
             recepts(title, description, marks) VALUES('{self.lineEdit.text()}',
             '{self.plainTextEdit.toPlainText()}',
-            '{' '.join(self.lineEdit_2.text().split())}')""")
+            '{'-'.join(self.lineEdit_2.text().split(","))}')""")
             self.db_connection.commit()
             self.close()
-        QtWidgets.QMessageBox.information(self, 'Успешно!',
-                                                'Новый рецепт успешно добавлен')
-        return
+            QtWidgets.QMessageBox.information(self, 'Успешно!',
+                                                    'Новый рецепт успешно добавлен')
+            self.hide()
+            self.lineEdit_2.clear()
+            self.lineEdit.clear()
+            self.plainTextEdit.clear()
 
     def unred(self):
         self.sender().setStyleSheet('border: 1px solid gray')

@@ -6,19 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>615</width>
-    <height>610</height>
+    <width>464</width>
+    <height>533</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Книга рецептов</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icons/receipt_book.png</normaloff>icons/receipt_book.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="sort">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>145</y>
+      <x>240</x>
+      <y>85</y>
       <width>201</width>
       <height>22</height>
      </rect>
@@ -27,8 +34,8 @@
    <widget class="QComboBox" name="comboBox">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>145</y>
+      <x>120</x>
+      <y>85</y>
       <width>111</width>
       <height>22</height>
      </rect>
@@ -37,8 +44,8 @@
    <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>180</y>
+      <x>30</x>
+      <y>120</y>
       <width>411</width>
       <height>311</height>
      </rect>
@@ -47,8 +54,8 @@
    <widget class="QComboBox" name="marks">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>145</y>
+      <x>30</x>
+      <y>85</y>
       <width>81</width>
       <height>22</height>
      </rect>
@@ -57,11 +64,48 @@
    <widget class="QListWidget" name="listWidget">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>180</y>
+      <x>30</x>
+      <y>120</y>
       <width>411</width>
       <height>311</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>460</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Календарь</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Curvos</family>
+      <pointsize>36</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Recipe book</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
@@ -70,19 +114,36 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>615</width>
+     <width>464</width>
      <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
-     <string>Возможности</string>
+     <string>Действия</string>
     </property>
     <addaction name="action"/>
     <addaction name="action_3"/>
     <addaction name="action_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_4"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Стиль</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>Фон</string>
+     </property>
+     <addaction name="action_7"/>
+     <addaction name="action_8"/>
+    </widget>
+    <addaction name="menu_3"/>
+    <addaction name="action_6"/>
    </widget>
    <addaction name="menu"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action">
@@ -98,6 +159,26 @@
   <action name="action_3">
    <property name="text">
     <string>Редактировать рецепт</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>Составить меню на день</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>Заголовок</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>Залить сплошным цветом</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>Добавить свой фон</string>
    </property>
   </action>
  </widget>
